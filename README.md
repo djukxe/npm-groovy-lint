@@ -11,7 +11,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/nvuillam/npm-groovy-lint?label=Star&maxAge=2592000)](https://GitHub.com/nvuillam/npm-groovy-lint/stargazers/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/nvuillam/npm-groovy-lint)](https://hub.docker.com/r/nvuillam/npm-groovy-lint)
 [![Docker Stars](https://img.shields.io/docker/stars/nvuillam/npm-groovy-lint)](https://hub.docker.com/r/nvuillam/npm-groovy-lint)
-[![License](https://img.shields.io/npm/l/npm-groovy-lint.svg)](https://github.com/nvuillam/npm-groovy-lint/blob/master/package.json)
+[![License](https://img.shields.io/npm/l/npm-groovy-lint.svg)](https://github.com/nvuillam/npm-groovy-lint/blob/main/package.json)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Groovy & Jenkinsfile Linter, Formatter and Auto-fixer
@@ -33,7 +33,7 @@ You can also use this package in :
 
 ![image](https://github.com/nvuillam/npm-groovy-lint/raw/main/docs/assets/images/npm-groovy-lint-results.png)
 
-See [CHANGELOG](https://github.com/nvuillam/npm-groovy-lint/blob/master/CHANGELOG.md)
+See [CHANGELOG](https://github.com/nvuillam/npm-groovy-lint/blob/main/CHANGELOG.md)
 
 Any **question**, **problem** or **enhancement request** ? Ask [**here**](https://github.com/nvuillam/npm-groovy-lint/issues) :)
 
@@ -63,7 +63,7 @@ Any **question**, **problem** or **enhancement request** ? Ask [**here**](https:
 | --returnrules           | Boolean | Return rules descriptions and URL if set                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --javaexecutable        | String  | Override java executable to use  <br/>Default: java<br/>Example: C:\\Program Files\\Java\\jdk1.8.0_144\\bin\\java.exe                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --javaoptions           | String  | Override java options to use  <br/>Default: "-Xms256m,-Xmx2048m"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| --insight               | Boolean | npm-groovy-lint collects anonymous usage statistics using [amplitude](https://www.npmjs.com/package/amplitude), in order to make new improvements based on how users use this package. <br/> Summary charts are available at [https://tinyurl.com/groovy-stats](https://tinyurl.com/groovy-stats).<br/> Analytics obviously does not receive sensitive information like your code, as you can see in [analytics.js](https://github.com/nvuillam/npm-groovy-lint/blob/master/lib/analytics.js).<br/> If you want to enable anonymous usage statistics, use `--insight` option. |
+| --insight               | Boolean | npm-groovy-lint collects anonymous usage statistics using [amplitude](https://www.npmjs.com/package/amplitude), in order to make new improvements based on how users use this package. <br/> Summary charts are available at [https://tinyurl.com/groovy-stats](https://tinyurl.com/groovy-stats).<br/> Analytics obviously does not receive sensitive information like your code, as you can see in [analytics.js](https://github.com/nvuillam/npm-groovy-lint/blob/main/lib/analytics.js).<br/> If you want to enable anonymous usage statistics, use `--insight` option. |
 | --codenarcargs          | String  | Use core CodeNarc arguments (all npm-groovy-lint arguments will be ignored)<br/> Doc: <http://codenarc.github.io/CodeNarc/codenarc-command-line.html><br/> Example: `npm-groovy-lint --codenarcargs -basedir="lib/example" -rulesetfiles="file:lib/example/RuleSet-Groovy.groovy" -maxPriority1Violations=0 -report="xml:ReportTestCodenarc.xml`                                                                                                                                                                                                                              |
 | -h<br/> --help          | Boolean | Show help (npm-groovy-lint -h OPTIONNAME to see option detail with examples)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | -v<br/> --version       | Boolean | Show npm-groovy-lint version (with CodeNarc version)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -144,7 +144,7 @@ Any **question**, **problem** or **enhancement request** ? Ask [**here**](https:
 
 ## Configuration
 
-Default rules definition ([`recommended`](https://github.com/nvuillam/npm-groovy-lint/blob/master/lib/.groovylintrc-recommended.json), based on [`all`](https://github.com/nvuillam/npm-groovy-lint/blob/master/lib/.groovylintrc-all.json) tracks a lot of errors, do not hesitate to ignore some of them (like NoDef ou RequiredVariableType) if they are too mean for your project.
+Default rules definition ([`recommended`](https://github.com/nvuillam/npm-groovy-lint/blob/main/lib/.groovylintrc-recommended.json), based on [`all`](https://github.com/nvuillam/npm-groovy-lint/blob/main/lib/.groovylintrc-all.json) tracks a lot of errors, do not hesitate to ignore some of them (like NoDef ou RequiredVariableType) if they are too mean for your project.
 
 Create a file named **.groovylintrc.json** in the current or any parent directory of where your files to analyze are located
 
@@ -159,7 +159,7 @@ Create a file named **.groovylintrc.json** in the current or any parent director
 
 ### Format
 
-- **extends**: Name of a base configuration ([`recommended`](https://github.com/nvuillam/npm-groovy-lint/blob/master/lib/.groovylintrc-recommended.json), [`recommended-jenkinsfile`](https://github.com/nvuillam/npm-groovy-lint/blob/master/lib/.groovylintrc-recommended-jenkinsfile.json), [`all`](https://github.com/nvuillam/npm-groovy-lint/blob/master/lib/.groovylintrc-all.json))
+- **extends**: Name of a base configuration ([`recommended`](https://github.com/nvuillam/npm-groovy-lint/blob/main/lib/.groovylintrc-recommended.json), [`recommended-jenkinsfile`](https://github.com/nvuillam/npm-groovy-lint/blob/main/lib/.groovylintrc-recommended-jenkinsfile.json), [`all`](https://github.com/nvuillam/npm-groovy-lint/blob/main/lib/.groovylintrc-all.json))
 - **rules**: List of rules definition, following format `"RuleSection.RuleName": ruleParameters` or `"RuleName": ruleParameters`
   - *RuleName*: any of the **[CodeNarc rules](https://codenarc.github.io/CodeNarc/codenarc-rule-index.html)**
   - *ruleParameters*: can be just a severity override ( `"off"`, `"error"`, `"warning"`, `"info"` ) , or a property list :
@@ -431,7 +431,7 @@ Example
 
 Contributions are very welcome !
 
-Please follow [Contribution instructions](https://github.com/nvuillam/npm-groovy-lint/blob/master/CONTRIBUTING.md)
+Please follow [Contribution instructions](https://github.com/nvuillam/npm-groovy-lint/blob/main/CONTRIBUTING.md)
 
 ## Thanks
 
